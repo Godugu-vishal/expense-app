@@ -1,6 +1,11 @@
 apt install nginx -y
 
-cp expense.conf /etc/nginx/default.d/expense.conf
+# Create the directory if it doesn't exist
+sudo mkdir -p /etc/nginx/default.d/
+
+# Copy the file to the destination
+sudo cp expense.conf /etc/nginx/default.d/
+
 
 systemctl enable nginx
 systemctl start nginx
